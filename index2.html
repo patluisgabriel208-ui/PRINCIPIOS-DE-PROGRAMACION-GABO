@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Suma de dos números</title>
+</head>
+<body class="min-h-screen bg-slate-100 flex items-center justify-center p-6">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-6 space-y-4">
+        <h1 class="text-2xl font-bold text-slate-800">Suma de dos números</h1>
+
+        <div class="space-y-2">
+            <label for="numero_1" class="block text-sm font-medium text-slate-700">Número 1</label>
+            <input type="number" id="numero_1" name="numero_1"
+                   class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="space-y-2">
+            <label for="numero_2" class="block text-sm font-medium text-slate-700">Número 2</label>
+            <input type="number" id="numero_2" name="numero_2"
+                   class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <button type="button" id="btnSuma"
+                class="w-full rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700">
+            Sumar
+        </button>
+
+        <p id="resultado" class="text-lg font-semibold text-slate-800"></p>
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+</html>  
