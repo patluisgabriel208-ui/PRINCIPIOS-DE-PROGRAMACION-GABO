@@ -49,7 +49,46 @@ Funciones implementadas:
 * Impresión de números pares del 1 al 20.
 * Impresión de números impares del 1 al 20.
 * Impresión de números primos del 1 al 20.
+  
+## Actividad 3: Números pares, impares y primos
 
+Archivo:
+
+tarea3.js
+
+El programa imprime:
+
+- Números pares del 1 al 20.
+- Números impares del 1 al 20.
+- Números primos del 1 al 20.
+## Actividad 4: Calculadora con Tailwind CSS
+
+Archivos:
+
+- index2.html
+- funciones.js
+
+Operaciones implementadas:
+
+- Suma
+- Resta
+- Multiplicación
+- División
+
+Diseño desarrollado con Tailwind CSS.
+
+## Actividad 5: Clasificador de números
+
+Archivos:
+
+- metodos.html
+- metodos.js
+
+Permite identificar si un número es:
+
+- Par o impar
+- Primo o no primo
+ 
 ## Autor
 
 Luis Gabriel Pat Sulud
