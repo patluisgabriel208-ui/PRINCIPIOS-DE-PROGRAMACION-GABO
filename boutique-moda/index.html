@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique Moda</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-100 via-white to-slate-200 text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+      <div>
+        <h1 class="text-2xl font-semibold tracking-tight">Boutique Moda</h1>
+        <p class="text-sm text-slate-500">Estilo premium traído de Estados Unidos</p>
+      </div>
+
+      <nav class="hidden items-center gap-6 md:flex">
+        <a href="#catalogo" class="text-sm font-medium text-slate-600 hover:text-black">Catálogo</a>
+        <a href="#categorias" class="text-sm font-medium text-slate-600 hover:text-black">Categorías</a>
+        <a href="#contacto" class="text-sm font-medium text-slate-600 hover:text-black">Contacto</a>
+      </nav>
+
+      <button id="pedidoWhatsApp"
+class="rounded-full bg-black px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02]">
+    Pedidos WhatsApp
+</button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-8 md:px-6">
+    <section class="grid gap-8 rounded-[2rem] bg-white/80 p-8 shadow-2xl ring-1 ring-black/5 lg:grid-cols-2 lg:items-center">
+      <div class="space-y-6">
+        <span class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
+          Boutique Premium
+        </span>
+
+        <h2 class="max-w-xl text-4xl font-semibold tracking-tight md:text-6xl">
+          Moda elegante, accesorios de marca y estilo diario con presencia.
+        </h2>
+
+        <p class="max-w-xl text-base leading-7 text-slate-600 md:text-lg">
+          Descubre bolsas de piel, ropa de marca, gorras, carteras, relojes, tenis y perfumes seleccionados para clientes que buscan calidad, imagen y exclusividad.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="#catalogo" class="rounded-full bg-black px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-slate-800">
+            Ver catálogo
+          </a>
+          <a href="#contacto" class="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
+            Contactar
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-2 text-sm text-slate-500">
+          <span>Envíos disponibles</span>
+          <span>•</span>
+          <span>Productos traídos de USA</span>
+          <span>•</span>
+          <span>Atención personalizada</span>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl">
+          <img
+            src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=1200&q=80"
+            alt="Moda premium"
+            class="h-[420px] w-full object-cover"
+          />
+        </div>
+        <div class="absolute -bottom-6 -left-6 rounded-3xl bg-white p-4 shadow-xl ring-1 ring-black/5">
+          <p class="text-sm font-medium text-slate-500">Seleccionado hoy</p>
+          <p class="text-lg font-semibold">Colección exclusiva</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+<button data-category="all" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+        <span class="block text-sm text-slate-500">Todo</span>
+        <span class="block text-lg font-semibold">Colección completa</span>
+    </button>
+
+    <button data-category="bolsas" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+        <span class="block text-sm text-slate-500">👜 Bolsas</span>
+        <span class="block text-lg font-semibold">Guess y Nine West</span>
+    </button>
+
+    <button data-category="carteras" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+        <span class="block text-sm text-slate-500">👛 Carteras</span>
+        <span class="block text-lg font-semibold">Tommy y Levi's</span>
+    </button>
+
+    <button data-category="mochilas" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+        <span class="block text-sm text-slate-500">🎒 Mochilas</span>
+        <span class="block text-lg font-semibold">Cuero premium</span>
+    </button>
+
+    <button data-category="relojes" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+        <span class="block text-sm text-slate-500">⌚ Relojes</span>
+        <span class="block text-lg font-semibold">Caballero y dama</span>
+    </button>
+
+     <button data-category="cosmeticos" class="category-btn rounded-2xl border border-slate-200 bg-white px-4 py-4 text-left shadow-sm">
+    <span class="block text-sm text-slate-500">💄 Cosméticos</span>
+    <span class="block text-lg font-semibold">Belleza y maquillaje</span>
+</button> 
+</div>
+    <section id="catalogo" class="mt-16">
+      <div class="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold tracking-tight">Catálogo</h3>
+          <p class="text-sm text-slate-500">Productos disponibles para comprar o apartar</p>
+        </div>
+
+        <div class="flex w-full flex-col gap-3 md:w-[420px]">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Buscar producto..."
+            class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-200"
+          />
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <section id="contacto" class="mt-16 rounded-[2rem] bg-black px-8 py-10 text-white shadow-2xl">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h3 class="text-3xl font-semibold tracking-tight">Contacto rápido</h3>
+          <p class="mt-3 max-w-xl text-white/70">
+            Haz tu pedido por WhatsApp, pregunta por disponibilidad o solicita más fotos de cualquier artículo.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 md:flex-row">
+
+    <a
+        href="https://wa.me/529981870911"
+        target="_blank"
+        class="flex-1 rounded-full bg-white px-8 py-4 text-center font-semibold text-black transition duration-300 hover:scale-105"
+    >
+        WhatsApp
+    </a>
+
+    <a
+        href="https://instagram.com/lorenaisabel.rosadohernandez"
+        target="_blank"
+        class="flex-1 rounded-full border border-white/20 px-8 py-4 text-center font-semibold text-white transition duration-300 hover:bg-white hover:text-black"
+    >
+        Instagram
+    </a>
+
+</div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="fixed right-4 top-24 z-50 hidden w-[92%] max-w-md rounded-[2rem] bg-white p-6 shadow-2xl ring-1 ring-black/10">
+    <div class="mb-4 flex items-center justify-between">
+      <div>
+        <h4 class="text-xl font-semibold">Carrito</h4>
+        <p class="text-sm text-slate-500">Productos seleccionados</p>
+      </div>
+      <button id="closeCartBtn" class="rounded-full bg-slate-100 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">Cerrar</button>
+    </div>
+
+    <div id="cartItems" class="space-y-3"></div>
+
+    <div class="mt-5 border-t border-slate-200 pt-4">
+      <div class="flex items-center justify-between text-lg font-semibold">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="mt-4 w-full rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800">
+        Finalizar compra
+      </button>
+    </div>
+  </aside>
+
+  <script>
+    const products = [
+      {
+        
+
+  id: 1,
+  name: "Bolsa Guess",
+  category: "bolsas",
+  price: 2499,
+  image: "assets/bolsa-guess2.jpg.jpeg",
+  description: "Bolsa original importada de Estados Unidos."
+},
+{
+  id: 2,
+  name: "Bolsa Guess Premium",
+  category: "bolsas",
+  price: 2799,
+  image: "assets/bolsa-guess3.jpg.jpeg",
+  description: "Bolsa elegante para uso diario."
+},
+{
+  id: 3,
+  name: "Bolsa Nine West",
+  category: "bolsas",
+  price: 2199,
+  image: "assets/bolsa-nine-west1.jpg.jpeg",
+  description: "Bolsa moderna y práctica."
+},
+{
+  id: 4,
+  name: "Crossbody Nine West",
+  category: "bolsas",
+  price: 1899,
+  image: "assets/crossbody-nine-west1.jpg.jpeg",
+  description: "Bolso crossbody importado."
+},
+{
+  id: 5,
+  name: "Crossbody Guess",
+  category: "bolsas",
+  price: 1999,
+  image: "assets/crossbody-guess4.jpg.jpeg",
+  description: "Diseño elegante y juvenil."
+},
+{
+  id: 6,
+  name: "Cartera Tommy Hilfiger",
+  category: "carteras",
+  price: 1299,
+  image: "assets/cartera-tommy1.jpg.jpeg",
+  description: "Cartera original de marca."
+},
+{
+  id: 7,
+  name: "Cartera Levi's Cuero",
+  category: "carteras",
+  price: 1199,
+  image: "assets/cartera-de-cuero-levis2.jpg.jpeg",
+  description: "Cartera de cuero resistente."
+},
+{
+  id: 8,
+  name: "Cartera Steve Madden",
+  category: "carteras",
+  price: 1499,
+  image: "assets/cartera-steve-madden3.jpg.jpeg",
+  description: "Diseño moderno y elegante."
+},
+{
+  id: 9,
+  name: "Mochila de Cuero",
+  category: "mochilas",
+  price: 1899,
+  image: "assets/mochila-de-cuero1.jpg.jpeg",
+  description: "Mochila premium para uso diario."
+},
+{
+  id: 10,
+  name: "Reloj American",
+  category: "relojes",
+  price: 3299,
+  image: "assets/reloj-american1.jpg.jpeg",
+  description: "Reloj elegante para caballero."
+},
+{
+  id: 11,
+  name: "Reloj Dama",
+  category: "relojes",
+  price: 2899,
+  image: "assets/reloj-dama2.jpg.jpeg",
+  description: "Diseño femenino y sofisticado."
+},
+{
+  id: 12,
+  name: "Cosmetiquera",
+  category: "cosmeticos",
+  price: 799,
+  image: "assets/cosmetiquera1.jpg.jpeg",
+  description: "Ideal para organizar maquillaje."
+},
+{
+  id: 13,
+  name: "Cosmetiquera Premium",
+  category: "cosmeticos",
+  price: 899,
+  image: "assets/cosmetiquera2.jpg.jpeg",
+  description: "Compacta y elegante."
+},
+{
+  id: 14,
+  name: "Contour Bebé",
+  category: "cosmeticos",
+  price: 599,
+  image: "assets/contour-bebe1.jpg.jpeg",
+  description: "Producto de belleza importado."
+}
+      
+    ];
+
+    let selectedCategory = "all";
+    let cart = [];
+
+    const productGrid = document.querySelector("#productGrid");
+    const searchInput = document.querySelector("#searchInput");
+    const cartPanel = document.querySelector("#cartPanel");
+    const cartItems = document.querySelector("#cartItems");
+    const cartCount = document.querySelector("#cartCount");
+    const cartTotal = document.querySelector("#cartTotal");
+
+    document.querySelector("#openCartBtn").addEventListener("click", () => {
+      cartPanel.classList.remove("hidden");
+    });
+
+    document.querySelector("#closeCartBtn").addEventListener("click", () => {
+      cartPanel.classList.add("hidden");
+    });
+
+    document.querySelectorAll(".category-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        selectedCategory = button.dataset.category;
+        renderProducts();
+      });
+    });
+
+    searchInput.addEventListener("input", renderProducts);
+
+    function formatPrice(value) {
+      return new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN"
+      }).format(value);
+    }
+
+    function renderProducts() {
+      const text = searchInput.value.toLowerCase();
+
+      const filtered = products.filter(product => {
+        const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
+        const matchesSearch = product.name.toLowerCase().includes(text) || product.description.toLowerCase().includes(text);
+        return matchesCategory && matchesSearch;
+      });
+
+      productGrid.innerHTML = filtered.map(product => `
+        <article class="group overflow-hidden rounded-[2rem] bg-white shadow-lg ring-1 ring-black/5 transition hover:-translate-y-1 hover:shadow-2xl">
+          <div class="relative h-72 overflow-hidden">
+            <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="space-y-4 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.2em] text-slate-400">${product.category}</p>
+                <h4 class="mt-1 text-xl font-semibold tracking-tight">${product.name}</h4>
+              </div>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">${formatPrice(product.price)}</span>
+            </div>
+            <p class="text-sm leading-6 text-slate-500">${product.description}</p>
+            <a
+    href="https://wa.me/529981870911?text=Hola,%20me%20interesa%20${encodeURIComponent(product.name)}%20por%20${formatPrice(product.price)}.%20¿Sigue%20disponible?"
+    target="_blank"
+    class="block w-full rounded-full bg-black px-5 py-3 text-center text-sm font-medium text-white transition hover:scale-[1.01] hover:bg-slate-800"
+>
+    Comprar por WhatsApp
+</a>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+      updateCart();
+      cartPanel.classList.remove("hidden");
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function updateCart() {
+      cartCount.textContent = cart.length;
+
+      cartItems.innerHTML = cart.length
+        ? cart.map((item, index) => `
+            <div class="flex items-center justify-between gap-4 rounded-2xl bg-slate-50 p-4">
+              <div>
+                <p class="font-medium text-slate-800">${item.name}</p>
+                <p class="text-sm text-slate-500">${formatPrice(item.price)}</p>
+              </div>
+              <button onclick="removeFromCart(${index})" class="rounded-full bg-white px-3 py-1 text-sm text-slate-600 shadow-sm hover:bg-slate-100">
+                Quitar
+              </button>
+            </div>
+          `).join("")
+        : '<p class="text-sm text-slate-500">El carrito está vacío.</p>';
+
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      cartTotal.textContent = formatPrice(total);
+    }
+
+    renderProducts();
+    updateCart();
+  </script>
+</body>
+</html>
